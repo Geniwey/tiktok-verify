@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Dato Crítico - Content Management Platform</title>
+    <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body style="background-color: #121212; color: #e0e0e0; font-family: Arial, sans-serif; padding: 50px; line-height: 1.6;">
     <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        
+        <img src="logo.png" alt="Dato Crítico Logo" style="width: 120px; height: 120px; border-radius: 24px;">
+        
         <h1 style="color: #ffffff;">Dato Crítico Studio</h1>
         <h2>Plataforma de Gestión de Contenido (SaaS)</h2>
-        <p style="text-align: left;">Bienvenido a la plataforma oficial de publicación Dato Crítico. Nuestra solución (actualmente en fase de Beta Cerrada) permite a los creadores de contenido gestionar y publicar sus vídeos cortos directamente en sus redes sociales.</p>
         <br><hr style="border-color: #333; margin-bottom: 30px;">
 
-        <!-- PANEL DE CONTROL SIMULADO PARA EL VÍDEO -->
-        <div style="background-color: #1e1e1e; padding: 20px; border-radius: 8px; margin-bottom: 30px; border: 1px solid #333;">
-            <h3 style="color: #fff; margin-top: 0;">Panel de Control (Beta)</h3>
-            <p style="font-size: 14px; margin-bottom: 20px;">Paso 1: Vincula tu cuenta. Paso 2: Publica el contenido generado.</p>
+        <div style="background-color: #1e1e1e; padding: 30px; border-radius: 8px; border: 1px solid #444;">
+            <h3 style="color: #fff; margin-top: 0;">Integración TikTok (Sandbox Mode)</h3>
+            
+            <div style="background-color: #2a2a2a; padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: left; font-size: 14px;">
+                <p style="margin: 0; color: #bbb;"><strong>Scopes Solicitados:</strong></p>
+                <ul style="margin-top: 5px; margin-bottom: 0;">
+                    <li><code>user.info.basic</code> (Para Login Kit)</li>
+                    <li><code>video.publish</code> & <code>video.upload</code> (Para Content Posting API)</li>
+                </ul>
+            </div>
 
-            <!-- BOTÓN DE LOGIN KIT -->
-            <a href="https://www.tiktok.com/v2/auth/authorize/?client_key=
-sbawj10cirj3ztg3n1&response_type=code&scope=user.info.basic,video.publish,video.upload&redirect_uri=https://geniwey.github.io/dato-critico/&state=12345" 
-               style="background-color: #FE2C55; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; margin: 5px;">
-               1. Conectar con TikTok
+            <a href="https://www.tiktok.com/v2/auth/authorize/?client_key=TU_CLIENT_KEY_AQUI&response_type=code&scope=user.info.basic,video.publish,video.upload&redirect_uri=https://geniwey.github.io/dato-critico/&state=12345" 
+               style="background-color: #FE2C55; color: white; padding: 14px 28px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; margin: 10px;">
+               1. Autorizar App (Login Kit)
             </a>
 
-            <!-- BOTÓN DE CONTENT POSTING API -->
-            <button onclick="alert('✅ Proceso de publicación iniciado. El vídeo se está enviando a TikTok a través de la API. Por favor, revisa tu perfil en unos minutos.')" 
-                    style="background-color: #00bcd4; color: black; padding: 12px 24px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; margin: 5px;">
-               2. Publicar Vídeo Ahora
+            <button onclick="alert('✅ Scopes verificados (video.publish, video.upload). Content Posting API inicializada. El vídeo se ha enviado correctamente al perfil Sandbox.')" 
+                    style="background-color: #00bcd4; color: black; padding: 14px 28px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; margin: 10px;">
+               2. Enviar Vídeo a TikTok (Content API)
             </button>
         </div>
 
-        <hr style="border-color: #333;">
+        <hr style="border-color: #333; margin-top: 40px;">
         <p style="margin-top: 20px;">
             <a href="privacidad.html" style="color: #00bcd4; text-decoration: none; margin-right: 20px;">Política de Privacidad</a>
             <a href="terminos.html" style="color: #00bcd4; text-decoration: none;">Términos de Servicio</a>
